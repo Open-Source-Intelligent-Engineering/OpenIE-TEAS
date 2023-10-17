@@ -97,5 +97,3 @@ my_testFun.terminate()
 ```
 
 Please note that if the `import matlab` line is highlighted with a yellow squiggly line in your code editor, you can ignore it. Do not install the `matlab` package via pip!
-
-The above is the content I've organized in markdown format. Please assist in translating it into an English version, ensuring the markdown format is maintained, as well as using English punctuation such as commas, etc.
