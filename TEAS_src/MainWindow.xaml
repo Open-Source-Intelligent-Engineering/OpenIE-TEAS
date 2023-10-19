@@ -5,8 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TEAS_src"
         mc:Ignorable="d"
-        Title="TEAS 2.0" Height="550" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="TEAS 2.0" Height="550" Width="850" Background="#FF968A8A">
+    <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
 </Window>
