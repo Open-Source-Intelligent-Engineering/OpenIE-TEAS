@@ -3,30 +3,26 @@ import random
 from PySide6 import QtCore, QtWidgets, QtGui
 
 
-class MyWidget(QtWidgets.QWidget):
+class TEAS(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
+        self.init_ui()
 
-        self.hello = ["Hallo Welt", "Hei maailma", "Hola Mundo", "Привет мир"]
-
-        self.button = QtWidgets.QPushButton("Click me!")
-        self.text = QtWidgets.QLabel("Hello World",
-                                     alignment=QtCore.Qt.AlignCenter)
-
-        self.layout = QtWidgets.QVBoxLayout(self)
-        self.layout.addWidget(self.text)
-        self.layout.addWidget(self.button)
-
-        self.button.clicked.connect(self.magic)
-
-    @QtCore.Slot()
-    def magic(self):
-        self.text.setText(random.choice(self.hello))
+    def init_ui(self):
+        # set windows title
+        self.setWindowTitle(
+            'Transcription and Expressiveness Annotation System 2.0')
+        # set application icon
+        icon_path = './assets/pic/TEAS_icon.png'
+        icon = QtGui.QIcon(icon_path)
+        self.setWindowIcon(icon)
+        # Fix window size
+        self.setFixedSize(1120, 720)
+        # add other UI initialization here
+        self.show()
 
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
-    widget = MyWidget()
-    widget.resize(1080, 720)
-    widget.show()
+    widget = TEAS()
     sys.exit(app.exec())
